@@ -6,21 +6,20 @@ export const Container = styled.SafeAreaView`
 `;
 
 export const ProviderList = styled.FlatList.attrs({
+  numColumns: 2,
   showsVerticalScrollIndicator: false,
-  numColumns: 2
 })`
   margin-top: 60px;
   padding: 0 20px;
 `;
 
 export const Provider = styled(RectButton)`
-  background: #FFF;
-  border-radius: 4px;
-  padding: 20px;
-
   flex: 1;
   align-items: center;
   margin: 0 10px 20px;
+  padding: 20px;
+  border-radius: 4px;
+  background: #fff;
 `;
 
 export const Avatar = styled.Image`
@@ -30,9 +29,9 @@ export const Avatar = styled.Image`
 `;
 
 export const Name = styled.Text`
+  text-align: center;
   margin-top: 15px;
   font-size: 14px;
   font-weight: bold;
   color: #333;
-  text-align: center;
 `;

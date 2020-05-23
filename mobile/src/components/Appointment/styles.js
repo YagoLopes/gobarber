@@ -6,16 +6,14 @@ export const Container = styled.View`
   border-radius: 4px;
   background: #fff;
 
-  display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 
-  opacity: ${props => (props.past ? 0.6 : 1)}
+  opacity: ${props => (props.past ? 0.6 : 1)};
 `;
 
 export const Left = styled.View`
-  display: flex;
   flex-direction: row;
   align-items: center;
 `;
@@ -31,13 +29,20 @@ export const Info = styled.View`
 `;
 
 export const Name = styled.Text`
-  font-weight: bold;
   font-size: 14px;
+  font-weight: bold;
   color: #333;
 `;
 
 export const Time = styled.Text`
-  color: #999;
-  font-size: 13px;
   margin-top: 4px;
+  font-size: 13px;
+  color: #999;
+`;
+
+export const Canceled = styled.Text`
+  margin-top: 4px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #f64c75;
 `;

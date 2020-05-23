@@ -1,50 +1,45 @@
+import { call, put, all, takeLatest } from 'redux-saga/effects';
 import { Alert } from 'react-native';
-import { takeLatest, call, put, all } from 'redux-saga/effects';
 
 import api from '~/services/api';
 
 import { signInSuccess, signFailure } from './actions';
 
 export function* signIn({ payload }) {
-  try {
-    const { email, password } = payload;
+  const { email, password } = payload;
 
-    const response = yield call(api.post, 'sessions', {
-      email,
-      password,
-    });
+  try {
+    const response = yield call(api.post, 'sessions', { email, password });
 
     const { token, user } = response.data;
 
     if (user.provider) {
-      Alert.alert('Erro no login', 'O usuário não pode ser prestador de serviços.');
+      Alert.alert('Login error', 'User cannot be a provider.');
       return;
     }
 
     api.defaults.headers.Authorization = `Bearer ${token}`;
 
     yield put(signInSuccess(token, user));
-
-    // history.push('/dashboard');
-  } catch (err) {
-    Alert.alert('Falha na autenticação', 'Houve um erro no login, verifique seus dados!');
+  } catch (error) {
+    Alert.alert('Login error', 'Authentication failed, check your data.');
     yield put(signFailure());
   }
 }
 
 export function* signUp({ payload }) {
-  const { name, email, password } = payload;
-
   try {
-    yield call(api.post, 'users', {
-      name,
-      email,
-      password,
-    });
+    const { name, email, password } = payload;
 
-    // history.push('/');
-  } catch (err) {
-    Alert.alert('Falha no cadastro', 'Houve um erro no cadastro, verifique seus dados!');
+    yield call(api.post, 'users', { name, email, password });
+
+    Alert.alert(
+      'Registration successful',
+      'Your account has been successfully registered, please login.'
+    );
+  } catch (error) {
+    Alert.alert('Sign up error', 'Registration failed, check your data.');
+
     yield put(signFailure());
   }
 }
@@ -54,7 +49,9 @@ export function setToken({ payload }) {
 
   const { token } = payload.auth;
 
-  if (token) api.defaults.headers.Authorization = `Bearer ${token}`;
+  if (token) {
+    api.defaults.headers.Authorization = `Bearer ${token}`;
+  }
 }
 
 export default all([

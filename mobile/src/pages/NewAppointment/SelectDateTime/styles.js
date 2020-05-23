@@ -7,24 +7,23 @@ export const Container = styled.SafeAreaView`
 
 export const HourList = styled.FlatList.attrs({
   numColumns: 2,
-  showsVerticalScrollIndicator: false
+  showsVerticalScrollIndicator: false,
 })`
   padding: 0 20px;
 `;
 
 export const Hour = styled(RectButton)`
-  background: #FFF;
-  border-radius: 4px;
-  padding: 20px;
   flex: 1;
-  opacity: ${ props => (props.enabled ? 1 : 0.6 )};
   align-items: center;
   margin: 0 10px 20px;
+  padding: 20px;
+  border-radius: 4px;
+  background: #fff;
+  opacity: ${props => (props.enabled ? 1 : 0.6)};
 `;
 
 export const Title = styled.Text`
   font-size: 14px;
   font-weight: bold;
   color: #333;
-
 `;

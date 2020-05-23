@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-// import { formatRelative, parseISO } from 'date-fns';
+import { formatRelative, parseISO } from 'date-fns';
 import { TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import PropTypes from 'prop-types';
@@ -14,10 +14,10 @@ export default function ConfirmAppointment({ navigation }) {
   const provider = navigation.getParam('provider');
   const time = navigation.getParam('time');
 
-  // const dateFormatted = useMemo(
-  //   () => formatRelative(parseISO(time), new Date()),
-  //   [time]
-  // );
+  const dateFormatted = useMemo(
+    () => formatRelative(parseISO(time), new Date()),
+    [time]
+  );
 
   async function handleAddAppointment() {
     await api.post('appointments', {
@@ -39,7 +39,7 @@ export default function ConfirmAppointment({ navigation }) {
           }}
         />
         <Name>{provider.name}</Name>
-        <Time>{time}</Time>
+        <Time>{dateFormatted}</Time>
         <SubmitButton onPress={handleAddAppointment}>
           Confirm Appointment
         </SubmitButton>
@@ -54,7 +54,8 @@ ConfirmAppointment.navigationOptions = ({ navigation }) => ({
     <TouchableOpacity
       onPress={() => {
         navigation.goBack();
-      }}>
+      }}
+    >
       <Icon name="chevron-left" size={20} color="#FFF" />
     </TouchableOpacity>
   ),
