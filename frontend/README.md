@@ -8,25 +8,25 @@ Este projeto foi iniciado com [Create React App](https://github.com/facebook/cre
 
 #### :unlock: Cadastro:
 
-![Cadastro](https://github.com/yagolopes/gobarber/frontend/blob/master/.github/create-account.gif)
+![Cadastro](https://github.com/yagolopes/gobarber/tree/master/frontend/blob/master/.github/create-account.gif)
 
 #### :unlock: Login:
 
-![Login](https://github.com/yagolopes/gobarber/frontend/blob/master/.github/login.gif)
+![Login](https://github.com/yagolopes/gobarber/tree/master/frontend/blob/master/.github/login.gif)
 
 #### :closed_lock_with_key: Meu perfil:
 
-![Meu-perfil](https://github.com/yagolopes/gobarber/frontend/blob/master/.github/my-profile.gif)
+![Meu-perfil](https://github.com/yagolopes/gobarber/tree/master/frontend/blob/master/.github/my-profile.gif)
 
 #### :closed_lock_with_key: Dashboard:
 
-![dashboard](https://github.com/yagolopes/gobarber/frontend/blob/master/.github/dashboard.gif)
+![dashboard](https://github.com/yagolopes/gobarber/tree/master/frontend/blob/master/.github/dashboard.gif)
 
 ---
 
 ## :hammer: Configuração:
 
-Antes de executar este, garanta que a [API](https://github.com/yagolopes/gobarber/backend) esteja configurada e em funcionamento.
+Antes de executar este, garanta que a [API](https://github.com/yagolopes/gobarber/tree/master/backend) esteja configurada e em funcionamento.
 
 ### Modo de desenvolvimento:
 
@@ -55,7 +55,7 @@ Veja mais informações sobre o modo de [produção](https://facebook.github.io/
 
 Você pode usar o [Reactotron](https://github.com/infinitered/reactotron/releases) para facilitar a depuração do aplicativo web e também do mobile.
 
-![REACTOTRON](https://github.com/yagolopes/gobarber/frontend/blob/master/.github/reactotron.png)
+![REACTOTRON](https://github.com/yagolopes/gobarber/tree/master/frontend/blob/master/.github/reactotron.png)
 
 ---
 
@@ -65,8 +65,8 @@ Você pode usar o [Reactotron](https://github.com/infinitered/reactotron/release
 
 ![Bootcamp](https://rocketseat.com.br/static/images/update/bootcamp.svg)
 
-### [GoBarber API](https://github.com/yagolopes/gobarber/backend)
+### [GoBarber API](https://github.com/yagolopes/gobarber/tree/master/backend)
 
-### [GoBarber WEB](https://github.com/yagolopes/gobarber/frontend)
+### [GoBarber WEB](https://github.com/yagolopes/gobarber/tree/master/frontend)
 
-### [GoBarber MOBILE](https://github.com/yagolopes/gobarber/mobile)
+### [GoBarber MOBILE](https://github.com/yagolopes/gobarber/tree/master/mobile)
