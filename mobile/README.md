@@ -8,19 +8,19 @@ Este projeto foi iniciado com [React Native init](https://facebook.github.io/rea
 
 #### :unlock: Cadastro:
 
-![Cadastro](https://github.com/yagolopes/gobarber/tree/master/mobile/blob/master/.github/create-account.gif)
+![Cadastro](https://github.com/yagolopes/gobarber/tree/master/mobile/.github/create-account.gif)
 
 #### :unlock: Login:
 
-![Login](https://github.com/yagolopes/gobarber/tree/master/mobile/blob/master/.github/login.gif)
+![Login](https://github.com/yagolopes/gobarber/tree/master/mobile/.github/login.gif)
 
 #### :closed_lock_with_key: Meu perfil:
 
-![Meu-perfil](https://github.com/yagolopes/gobarber/tree/master/mobile/blob/master/.github/my-profile.png)
+![Meu-perfil](https://github.com/yagolopes/gobarber/tree/master/mobile/.github/my-profile.png)
 
 #### :closed_lock_with_key: Agendar Horário:
 
-![dashboard](https://github.com/yagolopes/gobarber/tree/master/mobile/blob/master/.github/appointments.gif)
+![dashboard](https://github.com/yagolopes/gobarber/tree/master/mobile/.github/appointments.gif)
 
 ---
 
@@ -52,7 +52,7 @@ Com isso, basta executar `react-native run-android` para abrir o simulador com o
 
 Você pode usar o [Reactotron](https://github.com/infinitered/reactotron/releases) para facilitar a depuração do aplicativo web e também do mobile.
 
-![REACTOTRON](https://github.com/yagolopes/gobarber/tree/master/mobile/blob/master/.github/reactotron.png)
+![REACTOTRON](https://github.com/yagolopes/gobarber/tree/master/mobile/.github/reactotron.png)
 
 ---
 

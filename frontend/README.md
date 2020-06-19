@@ -8,19 +8,19 @@ Este projeto foi iniciado com [Create React App](https://github.com/facebook/cre
 
 #### :unlock: Cadastro:
 
-![Cadastro](https://github.com/yagolopes/gobarber/tree/master/frontend/blob/master/.github/create-account.gif)
+![Cadastro](https://github.com/yagolopes/gobarber/tree/master/frontend/.github/create-account.gif)
 
 #### :unlock: Login:
 
-![Login](https://github.com/yagolopes/gobarber/tree/master/frontend/blob/master/.github/login.gif)
+![Login](https://github.com/yagolopes/gobarber/tree/master/frontend/.github/login.gif)
 
 #### :closed_lock_with_key: Meu perfil:
 
-![Meu-perfil](https://github.com/yagolopes/gobarber/tree/master/frontend/blob/master/.github/my-profile.gif)
+![Meu-perfil](https://github.com/yagolopes/gobarber/tree/master/frontend/.github/my-profile.gif)
 
 #### :closed_lock_with_key: Dashboard:
 
-![dashboard](https://github.com/yagolopes/gobarber/tree/master/frontend/blob/master/.github/dashboard.gif)
+![dashboard](https://github.com/yagolopes/gobarber/tree/master/frontend/.github/dashboard.gif)
 
 ---
 
@@ -55,7 +55,7 @@ Veja mais informações sobre o modo de [produção](https://facebook.github.io/
 
 Você pode usar o [Reactotron](https://github.com/infinitered/reactotron/releases) para facilitar a depuração do aplicativo web e também do mobile.
 
-![REACTOTRON](https://github.com/yagolopes/gobarber/tree/master/frontend/blob/master/.github/reactotron.png)
+![REACTOTRON](https://github.com/yagolopes/gobarber/tree/master/frontend/.github/reactotron.png)
 
 ---
 

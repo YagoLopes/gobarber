@@ -21,17 +21,17 @@
 
 - O primeiro passo é reiniciar os containers do docker referentes ao PostgreSQL, MongoDB e Redis. Para isso basta executar no terminal `docker start postgresbarber mongobarber redisbarber`, conforme é mostrado abaixo:
 
-![restarting-docker](https://github.com/yagolopes/gobarber/tree/master/backend/blob/master/.github/restarting-docker.gif)
+![restarting-docker](https://github.com/yagolopes/gobarber/tree/master/backend/.github/restarting-docker.gif)
 
 - Após, levantar a aplicação com os seguintes comandos:
 
   - Executar `yarn dev` para levantar a **API**;
 
-  ![yarn-dev](https://github.com/yagolopes/gobarber/tree/master/backend/blob/master/.github/yarn-dev.gif)
+  ![yarn-dev](https://github.com/yagolopes/gobarber/tree/master/backend/.github/yarn-dev.gif)
 
   - Executar `yarn queue` para levantar **fila**.
 
-  ![yarn-queue](https://github.com/yagolopes/gobarber/tree/master/backend/blob/master/.github/yarn-queue.gif)
+  ![yarn-queue](https://github.com/yagolopes/gobarber/tree/master/backend/.github/yarn-queue.gif)
 
 ---
 
