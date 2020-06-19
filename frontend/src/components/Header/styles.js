@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
   background: #fff;
@@ -7,7 +7,7 @@ export const Container = styled.div`
 
 export const Content = styled.div`
   height: 64px;
-  max-width: 900px;
+  max-width: 1100px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -39,7 +39,7 @@ export const Profile = styled.div`
   display: flex;
   margin-left: 20px;
   padding-left: 20px;
-  border-left: 1px solod #eee;
+  border-left: 1px solid #eee;
 
   div {
     text-align: right;
@@ -59,8 +59,8 @@ export const Profile = styled.div`
   }
 
   img {
-    height: 32px;
     width: 32px;
+    height: 32px;
     border-radius: 50%;
   }
 `;

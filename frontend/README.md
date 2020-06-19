@@ -1,42 +1,72 @@
-# GoBarber - 7.0 - Frontend
+<img src="https://s3.us-east-2.amazonaws.com/gobarber-img/logo.svg" height = "150"/>
 
-![](https://hotmart.s3.amazonaws.com/product_contents/5bfd4a97-5e39-4c99-a871-8d3e969769cc/Course_Image01_580x320.jpg)
+Este projeto foi iniciado com [Create React App](https://github.com/facebook/create-react-app).
 
-![](https://img.shields.io/github/stars/newerton/gobarber-frontend.svg) ![](https://img.shields.io/github/forks/newerton/gobarber-frontend.svg) ![](https://img.shields.io/github/issues/newerton/gobarber-frontend.svg) ![](https://img.shields.io/github/license/newerton/gobarber-frontend.svg)
+---
 
-### Contents development
+## :open_book: Páginas:
 
-**Frontend - React.js**
+#### :unlock: Cadastro:
 
-| Lessons                     |        Done        |
-| --------------------------- | :----------------: |
-| Estrutura configurada       | :white_check_mark: |
-| Ajustes na API              | :white_check_mark: |
-| Configurando rotas          | :white_check_mark: |
-| Configurando Reactotron     | :white_check_mark: |
-| Rotas privadas              | :white_check_mark: |
-| Layouts por página          | :white_check_mark: |
-| Estilos globais             | :white_check_mark: |
-| Utilizando Root Import      | :white_check_mark: |
-| Estilização da autenticação | :white_check_mark: |
-| Utilizando Unform           | :white_check_mark: |
-| Validações                  | :white_check_mark: |
-| Configurando store          | :white_check_mark: |
-| Autenticação                | :white_check_mark: |
-| Armazenando perfil          | :white_check_mark: |
-| Persistindo autenticação    | :white_check_mark: |
-| Loading da autenticação     | :white_check_mark: |
-| Exibindo toasts             | :white_check_mark: |
-| Cadastro na aplicação       | :white_check_mark: |
-| Requisições autenticadas    | :white_check_mark: |
-| Configurando Header         | :white_check_mark: |
-| Estilizando notificações    | :white_check_mark: |
-| Notificações                | :white_check_mark: |
-| Página de perfil            | :white_check_mark: |
-| Atualizando perfil          | :white_check_mark: |
-| Foto de perfil              | :white_check_mark: |
-| Dados do Header             | :white_check_mark: |
-| Logout da aplicação         | :white_check_mark: |
-| Estilização do Dashboard    | :white_check_mark: |
-| Navegando entre dias        | :white_check_mark: |
-| Listando agendamentos       | :white_check_mark: |
+![Cadastro](https://github.com/yagolopes/gobarber/frontend/blob/master/.github/create-account.gif)
+
+#### :unlock: Login:
+
+![Login](https://github.com/yagolopes/gobarber/frontend/blob/master/.github/login.gif)
+
+#### :closed_lock_with_key: Meu perfil:
+
+![Meu-perfil](https://github.com/yagolopes/gobarber/frontend/blob/master/.github/my-profile.gif)
+
+#### :closed_lock_with_key: Dashboard:
+
+![dashboard](https://github.com/yagolopes/gobarber/frontend/blob/master/.github/dashboard.gif)
+
+---
+
+## :hammer: Configuração:
+
+Antes de executar este, garanta que a [API](https://github.com/yagolopes/gobarber/backend) esteja configurada e em funcionamento.
+
+### Modo de desenvolvimento:
+
+Execute `yarn start`.
+
+Executa o aplicativo no modo de desenvolvimento.<br />
+Abra [http://localhost:3000](http://localhost:3000) para ver o resultado no seu navegador.
+
+A página será recarregada se você fizer edições.<br />
+Você também verá os erros no console.
+
+### Modo de produção:
+
+Execute `yarn build`.
+
+Constroi o aplicativo para produção na pasta `build`.<br />
+Neste modo, ele agrupa corretamente o React no modo de produção e otimiza a construção para obter o melhor desempenho.
+
+A compilação é minificada e os nomes de arquivos incluem os hashes.<br />
+
+Veja mais informações sobre o modo de [produção](https://facebook.github.io/create-react-app/docs/deployment)
+
+---
+
+### Ferramenta para Debug
+
+Você pode usar o [Reactotron](https://github.com/infinitered/reactotron/releases) para facilitar a depuração do aplicativo web e também do mobile.
+
+![REACTOTRON](https://github.com/yagolopes/gobarber/frontend/blob/master/.github/reactotron.png)
+
+---
+
+## :rocket: APP GOBARBER
+
+- Api criado no bootcamp da Rocketseat
+
+![Bootcamp](https://rocketseat.com.br/static/images/update/bootcamp.svg)
+
+### [GoBarber API](https://github.com/yagolopes/gobarber/backend)
+
+### [GoBarber WEB](https://github.com/yagolopes/gobarber/frontend)
+
+### [GoBarber MOBILE](https://github.com/yagolopes/gobarber/mobile)

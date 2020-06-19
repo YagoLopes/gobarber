@@ -1,3 +1,5 @@
 import app from './app';
 
-app.listen(process.env.PORT || 3333);
+app.disable('x-powered-by');
+
+app.listen(3333);

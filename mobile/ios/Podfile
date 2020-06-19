@@ -1,8 +1,8 @@
 platform :ios, '9.0'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
-target 'modulo10' do
-  # Pods for modulo10
+target 'gobarber' do
+  # Pods for gobarber
   pod 'FBLazyVector', :path => "../node_modules/react-native/Libraries/FBLazyVector"
   pod 'FBReactNativeSpec', :path => "../node_modules/react-native/Libraries/FBReactNativeSpec"
   pod 'RCTRequired', :path => "../node_modules/react-native/Libraries/RCTRequired"
@@ -34,8 +34,9 @@ target 'modulo10' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
+  pod 'BVLinearGradient', :path => '../node_modules/react-native-linear-gradient'
 
-  target 'modulo10Tests' do
+  target 'gobarberTests' do
     inherit! :search_paths
     # Pods for testing
   end
@@ -43,10 +44,10 @@ target 'modulo10' do
   use_native_modules!
 end
 
-target 'modulo10-tvOS' do
-  # Pods for modulo10-tvOS
+target 'gobarber-tvOS' do
+  # Pods for gobarber-tvOS
 
-  target 'modulo10-tvOSTests' do
+  target 'gobarber-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end

@@ -1,29 +1,33 @@
-import React, { useState, useRef, useEffect } from "react";
-import { useField } from "@rocketseat/unform";
-import api from "~/services/api";
+import React, { useState, useRef, useEffect } from 'react';
+import { useField } from '@rocketseat/unform';
+import api from '~/services/api';
 
-import { Container } from "./styles";
+import { Container } from './styles';
 
 export default function AvatarInput() {
-  const { defaultValue, registerField } = useField("avatar");
+  const { defaultValue, registerField } = useField('avatar');
+
   const [file, setFile] = useState(defaultValue && defaultValue.id);
   const [preview, setPreview] = useState(defaultValue && defaultValue.url);
-  const ref = useRef();
+
+  const ref = useRef(null);
 
   useEffect(() => {
     if (ref.current) {
       registerField({
-        name: "avatar_id",
+        name: 'avatar_id',
         ref: ref.current,
-        path: "dataset.file"
+        path: 'dataset.file',
       });
     }
-  }, [ref, registerField]);
+  }, [ref.current]);
 
   async function handleChange(e) {
     const data = new FormData();
-    data.append("file", e.target.files[0]);
-    const response = await api.post("files", data);
+
+    data.append('file', e.target.files[0]);
+
+    const response = await api.post('files', data);
 
     const { id, url } = response.data;
 
@@ -36,9 +40,9 @@ export default function AvatarInput() {
       <label htmlFor="avatar">
         <img
           src={
-            preview || "https://api.adorable.io/avatars/50/abott@adorable.png"
+            preview || 'https://api.adorable.io/avatars/50/abott@adorable.png'
           }
-          alt=""
+          alt="avatar"
         />
 
         <input

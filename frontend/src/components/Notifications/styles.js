@@ -1,6 +1,6 @@
-import styled, { css } from "styled-components";
-import PerfectScrollBar from "react-perfect-scrollbar";
-import { lighten } from "polished";
+import styled, { css } from 'styled-components';
+import PerfectScrollbar from 'react-perfect-scrollbar';
+import { lighten } from 'polished';
 
 export const Container = styled.div`
   position: relative;
@@ -10,7 +10,6 @@ export const Badge = styled.button`
   background: none;
   border: 0;
   position: relative;
-  cursor: pointer;
 
   ${props =>
     props.hasUnread &&
@@ -22,38 +21,38 @@ export const Badge = styled.button`
         width: 8px;
         height: 8px;
         background: #ff892e;
-        content: "";
+        content: '';
         border-radius: 50%;
       }
     `}
-`;
-
-export const Scroll = styled(PerfectScrollBar)`
-  max-height: 300px;
-  padding: 5px 15px;
 `;
 
 export const NotificationList = styled.div`
   position: absolute;
   width: 260px;
   left: calc(50% - 130px);
-  top: calc(100% + 20px);
+  top: calc(100% + 30px);
   background: rgba(0, 0, 0, 0.6);
   border-radius: 4px;
   padding: 15px 5px;
-  display: ${props => (props.visible ? "block" : "none")};
+  display: ${props => (props.visible ? 'block' : 'none')};
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
-    left: calc(50% - 10px);
-    top: -10px;
+    left: calc(50% - 20px);
+    top: -20px;
     width: 0;
     height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 10px solid rgba(0, 0, 0, 0.6);
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid rgba(0, 0, 0, 0.6);
   }
+`;
+
+export const Scroll = styled(PerfectScrollbar)`
+  max-height: 260px;
+  padding: 5px 15px;
 `;
 
 export const Notification = styled.div`
@@ -71,25 +70,24 @@ export const Notification = styled.div`
   }
 
   time {
+    display: block;
     font-size: 12px;
     opacity: 0.6;
-    display: block;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
 
   button {
     font-size: 12px;
     border: 0;
     background: none;
-    color: ${lighten(0.2, "#7159c1")};
-    cursor: pointer;
+    color: ${lighten(0.2, '#7159c1')};
   }
 
   ${props =>
     props.unread &&
     css`
       &::after {
-        content: "";
+        content: '';
         display: inline-block;
         width: 8px;
         height: 8px;

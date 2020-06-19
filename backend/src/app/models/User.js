@@ -1,4 +1,5 @@
 import Sequelize, { Model } from 'sequelize';
+
 import bcrypt from 'bcryptjs';
 
 class User extends Model {
@@ -9,7 +10,7 @@ class User extends Model {
         email: Sequelize.STRING,
         password: Sequelize.VIRTUAL,
         password_hash: Sequelize.STRING,
-        provider: Sequelize.BOOLEAN,
+        provider: Sequelize.STRING,
       },
       {
         sequelize,

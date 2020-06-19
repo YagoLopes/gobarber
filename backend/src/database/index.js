@@ -6,6 +6,7 @@ import File from '../app/models/File';
 import Appointment from '../app/models/Appointment';
 
 import databaseConfig from '../config/database';
+import mongoConfig from '../config/mongo';
 
 const models = [User, File, Appointment];
 
@@ -18,25 +19,18 @@ class Database {
   init() {
     this.connection = new Sequelize(databaseConfig);
 
-    models
-      .map(model => model.init(this.connection))
-      .map(model => model.associate && model.associate(this.connection.models));
+    models.map(model => model.init(this.connection));
+    models.map(
+      model => model.associate && model.associate(this.connection.models)
+    );
   }
 
   mongo() {
-    this.mongoConnection = mongoose
-      .connect(process.env.MONGO_URL, {
-        useNewUrlParser: true,
-        useFindAndModify: true,
-      })
-      .then(
-        () => {
-          console.log('MongoDB is ready!');
-        },
-        err => {
-          console.log(err);
-        }
-      );
+    this.mongoConnection = mongoose.connect(
+      `${mongoConfig.driver}://${mongoConfig.host}:${mongoConfig.port}/${mongoConfig.database}`,
+      { useNewUrlParser: true, useFindAndModify: true }
+    );
   }
 }
+
 export default new Database();

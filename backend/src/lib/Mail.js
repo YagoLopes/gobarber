@@ -1,26 +1,25 @@
-import nodemaile from 'nodemailer';
-import { resolve, dirname } from 'path';
+import nodemailer from 'nodemailer';
 import exphbs from 'express-handlebars';
 import nodemailerhbs from 'nodemailer-express-handlebars';
+import { resolve } from 'path';
 import mailConfig from '../config/mail';
 
 class Mail {
   constructor() {
     const { host, port, secure, auth } = mailConfig;
 
-    this.transporter = nodemaile.createTransport({
+    this.transporter = nodemailer.createTransport({
       host,
       port,
       secure,
       auth: auth.user ? auth : null,
     });
 
-    this.configuraTemplates();
+    this.configureTemplates();
   }
 
-  configuraTemplates() {
+  configureTemplates() {
     const viewPath = resolve(__dirname, '..', 'app', 'views', 'emails');
-
     this.transporter.use(
       'compile',
       nodemailerhbs({

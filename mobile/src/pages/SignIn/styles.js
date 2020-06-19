@@ -1,5 +1,6 @@
-import styled from 'styled-components/native';
 import { Platform } from 'react-native';
+
+import styled from 'styled-components';
 
 import Input from '~/components/Input';
 import Button from '~/components/Button';
@@ -24,7 +25,7 @@ export const FormInput = styled(Input)`
 `;
 
 export const SubmitButton = styled(Button)`
-  margin-top: 20px;
+  margin-top: 5px;
 `;
 
 export const SignLink = styled.TouchableOpacity`
@@ -33,9 +34,6 @@ export const SignLink = styled.TouchableOpacity`
 
 export const SignLinkText = styled.Text`
   color: #fff;
-  font-size: 16px;
-`;
-
-export const Strong = styled.Text`
   font-weight: bold;
+  font-size: 16px;
 `;

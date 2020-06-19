@@ -1,22 +1,19 @@
-//Atualiza esses dados ai no meu perfil!! ... reducer.js
 export function updateProfileRequest(data) {
   return {
-    type: "@user/UPDATE_PROFILE_REQUEST",
-    payload: { data }
+    type: '@user/UPDATE_PROFILE_REQUEST',
+    payload: { data },
   };
 }
 
-//Atualizei os novos dados dele, pega ai eles atualizados!!
 export function updateProfileSuccess(profile) {
   return {
-    type: "@user/UPDATE_PROFILE_SUCCESS",
-    payload: { profile } // peguei!!
+    type: '@user/UPDATE_PROFILE_SUCCESS',
+    payload: { profile },
   };
 }
 
-//Não consegui alterar seus dados !!
-export function updateProfileFailure() {
+export function updateProfileFailure(data) {
   return {
-    type: "@user/UPDATE_PROFILE_REQUEST"
+    type: '@user/UPDATE_PROFILE_FAILURE',
   };
 }

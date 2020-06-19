@@ -1,13 +1,11 @@
 import React, { useRef, useState } from 'react';
 import { Image } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
-import PropTypes from 'prop-types';
-
-import { signInRequest } from '~/store/modules/auth/actions';
-
-import Background from '~/components/Background';
 
 import logo from '~/assets/logo.png';
+
+import Background from '~/components/Background';
+import { signInRequest } from '~/store/modules/auth/actions';
 
 import {
   Container,
@@ -16,10 +14,9 @@ import {
   SubmitButton,
   SignLink,
   SignLinkText,
-  Strong,
 } from './styles';
 
-export default function SignIn({ navigation }) {
+export default function Signin({ navigation }) {
   const dispatch = useDispatch();
   const passwordRef = useRef();
 
@@ -36,13 +33,14 @@ export default function SignIn({ navigation }) {
     <Background>
       <Container>
         <Image source={logo} />
+
         <Form>
           <FormInput
             icon="mail-outline"
-            placeholder="Email Address"
-            keyboardType="email-address"
-            autoCorrect={false}
+            keyboradType="email-address"
+            autoCorret={false}
             autoCapitalize="none"
+            placeholder="Digite seu email"
             returnKeyType="next"
             onSubmitEditing={() => passwordRef.current.focus()}
             value={email}
@@ -50,30 +48,24 @@ export default function SignIn({ navigation }) {
           />
           <FormInput
             icon="lock-outline"
-            placeholder="Password"
             secureTextEntry
+            placeholder="Sua senha secreta"
             ref={passwordRef}
             returnKeyType="send"
             onSubmitEditing={handleSubmit}
             value={password}
             onChangeText={setPassword}
           />
+
           <SubmitButton loading={loading} onPress={handleSubmit}>
-            Log in
+            Acessar
           </SubmitButton>
         </Form>
+
         <SignLink onPress={() => navigation.navigate('SignUp')}>
-          <SignLinkText>
-            Don’t have an account? <Strong>Sign up</Strong>
-          </SignLinkText>
+          <SignLinkText>Criar conta gratuita</SignLinkText>
         </SignLink>
       </Container>
     </Background>
   );
 }
-
-SignIn.propTypes = {
-  navigation: PropTypes.shape({
-    navigate: PropTypes.func.isRequired,
-  }).isRequired,
-};

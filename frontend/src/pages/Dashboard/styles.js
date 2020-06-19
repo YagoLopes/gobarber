@@ -1,11 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
-  overflow: hidden;
   max-width: 600px;
   margin: 50px auto;
-  height: 100%;
-  width: 100%;
 
   display: flex;
   flex-direction: column;
@@ -18,7 +15,6 @@ export const Container = styled.div`
     button {
       border: 0;
       background: none;
-      cursor: pointer;
     }
 
     strong {
@@ -33,22 +29,19 @@ export const Container = styled.div`
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 15px;
     margin-top: 30px;
-    overflow: auto;
-    height: 100%;
   }
 `;
 
 export const Time = styled.li`
   padding: 20px;
   border-radius: 4px;
-  border: 1px solid ${props => (props.available ? "transparent" : "#fff")};
-  background: ${props => (props.available ? "#fff" : "transparent")};
+  background: #fff;
 
   opacity: ${props => (props.past ? 0.6 : 1)};
 
   strong {
     display: block;
-    color: ${props => (props.available ? "#999" : "#fff")};
+    color: ${props => (props.available ? '#999' : '#7159c1')};
     font-size: 20px;
     font-weight: normal;
   }
@@ -56,6 +49,6 @@ export const Time = styled.li`
   span {
     display: block;
     margin-top: 3px;
-    color: ${props => (props.available ? "#999" : "#fff")};
+    color: ${props => (props.available ? '#999' : '#666')};
   }
 `;

@@ -1,23 +1,21 @@
-import produce from "immer";
+import produce from 'immer';
 
 const INITIAL_STATE = {
-  profile: null // novos dados do perfil
+  profile: null,
 };
 
 export default function user(state = INITIAL_STATE, action) {
   return produce(state, draft => {
     switch (action.type) {
-      case "@auth/SIGN_IN_SUCCESS": {
+      case '@auth/SIGN_IN_SUCCESS': {
         draft.profile = action.payload.user;
         break;
       }
-
-      //O cara alterou o perfil dele, pega os novos dados ai!! ... sagas.js
-      case "@user/UPDATE_PROFILE_SUCCESS": {
-        draft.profile = action.payload.profile; //Peguei!!
+      case '@user/UPDATE_PROFILE_SUCCESS': {
+        draft.profile = action.payload.profile;
         break;
       }
-      case "@auth/SIGN_OUT": {
+      case '@auth/SIGN_OUT': {
         draft.profile = null;
         break;
       }

@@ -1,9 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-
-import { updateProfileRequest } from '~/store/modules/user/actions';
-import { signOut } from '~/store/modules/auth/actions';
 
 import Background from '~/components/Background';
 
@@ -12,14 +9,17 @@ import {
   Title,
   Form,
   FormInput,
-  SubmitButton,
   Separator,
-  SignOutButton,
+  SubmitButton,
+  LogoutButton,
 } from './styles';
 
+import { updateProfileRequest } from '~/store/modules/user/actions';
+import { signOut } from '~/store/modules/auth/actions';
+
 export default function Profile() {
-  const profile = useSelector(state => state.user.profile);
   const dispatch = useDispatch();
+  const profile = useSelector(state => state.user.profile);
 
   const emailRef = useRef();
   const oldPasswordRef = useRef();
@@ -28,12 +28,10 @@ export default function Profile() {
 
   const [name, setName] = useState(profile.name);
   const [email, setEmail] = useState(profile.email);
-
   const [oldPassword, setOldPassword] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
 
-  // Clean input form after profile is updated on Redux store
   useEffect(() => {
     setOldPassword('');
     setPassword('');
@@ -52,71 +50,77 @@ export default function Profile() {
     );
   }
 
-  function handleSignOut() {
+  function handleLogout() {
     dispatch(signOut());
   }
 
   return (
     <Background>
       <Container>
-        <Title>My Profile</Title>
+        <Title>Meu perfil</Title>
 
         <Form>
           <FormInput
             icon="person-outline"
-            placeholder="Full Name"
-            value={name}
-            onChangeText={setName}
-            autoCorrect={false}
+            autoCorret={false}
             autoCapitalize="none"
+            placeholder="Nome completo"
             returnKeyType="next"
             onSubmitEditing={() => emailRef.current.focus()}
+            value={name}
+            onChangeText={setName}
           />
+
           <FormInput
             icon="mail-outline"
-            placeholder="Email Address"
-            value={email}
-            onChangeText={setEmail}
-            keyboardType="email-address"
-            autoCorrect={false}
+            keyboradType="email-address"
+            autoCorret={false}
             autoCapitalize="none"
+            placeholder="Digite seu email"
             ref={emailRef}
             returnKeyType="next"
             onSubmitEditing={() => oldPasswordRef.current.focus()}
+            value={email}
+            onChangeText={setEmail}
           />
+
           <Separator />
+
           <FormInput
             icon="lock-outline"
-            placeholder="Current Password"
-            value={oldPassword}
-            onChangeText={setOldPassword}
             secureTextEntry
+            placeholder="Sua senha atual"
             ref={oldPasswordRef}
             returnKeyType="next"
             onSubmitEditing={() => passwordRef.current.focus()}
+            value={oldPassword}
+            onChangeText={setOldPassword}
           />
+
           <FormInput
             icon="lock-outline"
-            placeholder="New Password"
-            value={password}
-            onChangeText={setPassword}
             secureTextEntry
+            placeholder="Sua nova senha"
             ref={passwordRef}
             returnKeyType="next"
             onSubmitEditing={() => confirmPasswordRef.current.focus()}
+            value={password}
+            onChangeText={setPassword}
           />
+
           <FormInput
             icon="lock-outline"
-            placeholder="Confirm New Password"
-            value={confirmPassword}
-            onChangeText={setConfirmPassword}
             secureTextEntry
+            placeholder="Confirme sua nova senha"
             ref={confirmPasswordRef}
             returnKeyType="send"
             onSubmitEditing={handleSubmit}
+            value={confirmPassword}
+            onChangeText={setConfirmPassword}
           />
-          <SubmitButton onPress={handleSubmit}>Update Profile</SubmitButton>
-          <SignOutButton onPress={handleSignOut}>Sign Out</SignOutButton>
+
+          <SubmitButton onPress={handleSubmit}>Atualizar Perfil</SubmitButton>
+          <LogoutButton onPress={handleLogout}>Sair do GoBarber</LogoutButton>
         </Form>
       </Container>
     </Background>
@@ -124,7 +128,7 @@ export default function Profile() {
 }
 
 Profile.navigationOptions = {
-  tabBarLabel: 'My Profile',
+  tabBarLabel: 'Meu perfil',
   tabBarIcon: ({ tintColor }) => (
     <Icon name="person" size={20} color={tintColor} />
   ),

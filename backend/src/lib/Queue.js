@@ -1,5 +1,7 @@
 import Bee from 'bee-queue';
+
 import CancellationMail from '../app/jobs/CancellationMail';
+
 import redisConfig from '../config/redis';
 
 const jobs = [CancellationMail];
@@ -35,6 +37,7 @@ class Queue {
   }
 
   handleFailure(job, err) {
+    // eslint-disable-next-line no-console
     console.log(`Queue ${job.queue.name}: FAILED`, err);
   }
 }
